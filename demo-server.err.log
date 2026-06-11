@@ -16,3 +16,17 @@
 127.0.0.1 - - [11/Jun/2026 18:11:00] "GET /assets/Sangetzu.jpg HTTP/1.1" 200 -
 127.0.0.1 - - [11/Jun/2026 18:11:00] code 404, message File not found
 127.0.0.1 - - [11/Jun/2026 18:11:00] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [11/Jun/2026 18:12:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:12:08] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:12:08] "GET /site.config.js HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:12:08] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:12:08] "GET /assets/Sangetzu.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:12:08] code 404, message File not found
+127.0.0.1 - - [11/Jun/2026 18:12:08] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [11/Jun/2026 18:13:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:13:19] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:13:19] "GET /site.config.js HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:13:19] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:13:19] "GET /assets/Sangetzu.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 18:13:19] code 404, message File not found
+127.0.0.1 - - [11/Jun/2026 18:13:19] "GET /favicon.ico HTTP/1.1" 404 -
