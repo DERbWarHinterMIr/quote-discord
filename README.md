@@ -1,45 +1,27 @@
 # quote-discord
 
-A small Discord slash-command bot for saving and retrieving quotes.
+A static GitHub Pages quote website with a dark, image-backed design.
 
-## Requirements
+## Edit The Quote
 
-- Node.js 20 or newer
-- A Discord application and bot token
+Change the text in `site.config.js`:
 
-## Setup
+```js
+window.quoteSite = {
+  quote: 'Your quote here.',
+  author: 'Author name',
+  backgroundImage: 'assets/background.png',
+};
+```
 
-1. Install dependencies:
+To use your own background, put the image in `assets/` and update `backgroundImage`.
 
-   ```bash
-   npm install
-   ```
+## GitHub Pages
 
-2. Copy `.env.example` to `.env` and fill in:
+In the repository settings on GitHub:
 
-   ```env
-   DISCORD_TOKEN=...
-   CLIENT_ID=...
-   GUILD_ID=...
-   ```
-
-3. Register slash commands:
-
-   ```bash
-   npm run deploy
-   ```
-
-4. Start the bot:
-
-   ```bash
-   npm start
-   ```
-
-## Commands
-
-- `/quote add text:<quote> author:<optional>` saves a quote.
-- `/quote random` posts a random quote.
-- `/quote list` lists recent quotes.
-- `/quote delete id:<id>` deletes a quote you added. Users with Manage Messages can delete any quote.
-
-Quotes are stored in `data/quotes.json`, which is intentionally ignored by Git.
+1. Open **Settings**.
+2. Open **Pages**.
+3. Set **Source** to **Deploy from a branch**.
+4. Choose branch **main** and folder **/**.
+5. Save.

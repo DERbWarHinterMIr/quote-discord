@@ -1,0 +1,130 @@
+:root {
+  color-scheme: dark;
+  --background-image: url("assets/background.png");
+  --text: #f6f1e8;
+  --muted: #c7bda8;
+  --line: rgba(246, 241, 232, 0.24);
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #050607;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.28) 52%, rgba(0, 0, 0, 0.72)),
+    radial-gradient(circle at 72% 20%, rgba(217, 168, 92, 0.22), transparent 32rem),
+    radial-gradient(circle at 12% 80%, rgba(43, 148, 142, 0.2), transparent 28rem),
+    var(--background-image) center / cover fixed no-repeat;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(120deg, rgba(0, 0, 0, 0.5), transparent 72%);
+}
+
+.quote-page {
+  display: grid;
+  min-height: 100vh;
+  padding: clamp(24px, 5vw, 72px);
+  align-items: center;
+}
+
+.quote-stage {
+  width: min(920px, 100%);
+  padding-block: clamp(40px, 9vh, 112px);
+}
+
+.quote-stage::before {
+  display: block;
+  width: 88px;
+  height: 1px;
+  margin-bottom: clamp(24px, 5vw, 48px);
+  content: "";
+  background: linear-gradient(90deg, #d8a85e, rgba(216, 168, 94, 0));
+  box-shadow: 0 0 28px rgba(216, 168, 94, 0.45);
+}
+
+.kicker {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.quote {
+  max-width: 15ch;
+  margin: 0;
+  color: var(--text);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.4rem, 9vw, 8.6rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-wrap: balance;
+  text-shadow: 0 26px 48px var(--shadow);
+}
+
+.quote::before {
+  content: open-quote;
+}
+
+.quote::after {
+  content: close-quote;
+}
+
+.author {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin: clamp(28px, 5vw, 48px) 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.28rem);
+  font-weight: 500;
+}
+
+.author::before {
+  width: clamp(36px, 8vw, 96px);
+  height: 1px;
+  content: "";
+  background: var(--line);
+}
+
+@media (max-width: 680px) {
+  body {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.86)),
+      radial-gradient(circle at 50% 12%, rgba(217, 168, 92, 0.18), transparent 18rem),
+      var(--background-image) center / cover fixed no-repeat;
+  }
+
+  .quote-page {
+    padding: 28px;
+  }
+
+  .quote {
+    max-width: 11ch;
+    font-size: clamp(3rem, 16vw, 5.4rem);
+  }
+}
