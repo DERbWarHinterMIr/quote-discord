@@ -3,7 +3,7 @@ const quoteText = document.querySelector('#quoteText');
 const quoteAuthor = document.querySelector('#quoteAuthor');
 
 if (config.quote && quoteText) {
-  quoteText.textContent = config.quote;
+  quoteText.textContent = config.quote.replace(/\\n/g, '\n');
 }
 
 if (config.author && quoteAuthor) {

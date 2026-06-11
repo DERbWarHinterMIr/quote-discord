@@ -46,12 +46,13 @@ body::before {
   display: grid;
   min-height: 100vh;
   padding: clamp(24px, 5vw, 72px);
-  align-items: center;
+  align-items: start;
+  justify-items: start;
 }
 
 .quote-stage {
-  width: min(920px, 100%);
-  padding-block: clamp(40px, 9vh, 112px);
+  width: min(1480px, 100%);
+  padding-block: clamp(28px, 5vh, 64px);
 }
 
 .quote-stage::before {
@@ -74,15 +75,15 @@ body::before {
 }
 
 .quote {
-  max-width: 15ch;
+  max-width: min(52ch, 100%);
   margin: 0;
   color: var(--text);
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3.4rem, 9vw, 8.6rem);
+  font-size: clamp(1.45rem, 2.65vw, 3.35rem);
   font-weight: 600;
-  line-height: 0.92;
+  line-height: 1.14;
   letter-spacing: 0;
-  text-wrap: balance;
+  white-space: pre-line;
   text-shadow: 0 26px 48px var(--shadow);
 }
 
@@ -120,11 +121,12 @@ body::before {
   }
 
   .quote-page {
-    padding: 28px;
+    padding: 24px;
   }
 
   .quote {
-    max-width: 11ch;
-    font-size: clamp(3rem, 16vw, 5.4rem);
+    max-width: 100%;
+    font-size: clamp(1.2rem, 6.4vw, 2rem);
+    line-height: 1.18;
   }
 }
